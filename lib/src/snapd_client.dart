@@ -594,7 +594,7 @@ class _SnapdErrorResponse extends _SnapdResponse {
 class SnapdClient {
   SnapdClient({
     this.userAgent = 'snapd.dart',
-    String socketPath = '/var/run/snapd.socket',
+    String socketPath = '@/snapd/snapd-snap.socket',
   }) : _client = HttpClient() {
     _client.connectionFactory = (uri, proxyHost, proxyPort) {
       final address =
